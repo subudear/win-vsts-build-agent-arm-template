@@ -3,28 +3,28 @@
   "contentVersion": "1.0.0.0",
 	"parameters": {
 		"vmName": {
-			"value": "qatsubodh123"
+			"value": "qatodhsub123"
 		},
 		"vmAdminUserName": {
-			"value": "bpadmin"
+			"value": "admin"
 		},
 		"vmAdminPassword": {
 			"value": "P@ssw0rd01"
 		},
 		"VSTSAccount": {
-			"value": "ghamad"
+			"value": "testdevops"
 		},
 		"PersonalAccessToken": {
 			"value": "y437kbc5zo6lk5jbkulumkexqqferzf3wcv24jwiynd6lebz5bya"
 		},
 		"poolName": {
-			"value": "Self-Hosted Windows Agent"
+			"value": "winpool"
 		},
 		"virtualNetworkNewOrExisting": {
 			"value": "new"
 		},
 		"existingVirtualNetworkName": {
-			"value": "vnet01qasubodh"
+			"value": "vnet01qaodhsub"
 		},
 		"addressPrefixes": {
 			"value": [ "10.0.0.0/16" ]
@@ -33,7 +33,7 @@
 			"value": "10.0.0.0/24"
 		},
 		"existingSubnetName": {
-			"value": "vnet01-qasubodh"
+			"value": "vnet01-qaodhsub"
 		},
 		"existingVirtualNetworkResourceGroupName": {
 			"value": "Testpoc"

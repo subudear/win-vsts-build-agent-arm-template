@@ -78,7 +78,7 @@
 			"metadata": {
 				"description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
 			},
-			"defaultValue": "https://gist.githubusercontent.com/subudear/3ca7e023e3cd08028b49eb090f2946b4/raw/07354f8e3a6aeabbec79d0ca150db2856af1fdb2/installvstsagent.ps1"
+			"defaultValue": ""
 		},
 		"virtualNetworkNewOrExisting": {
 			"type": "string",
@@ -238,7 +238,7 @@
 		{
 			"type": "Microsoft.Compute/virtualMachines/extensions",
 			"apiVersion": "2018-10-01",
-			"name": "[concat(parameters('vmName'), '/vstsagent')]",
+			"name": "[concat(parameters('vmName'), '/vstsagents')]",
 			"location": "australiaeast",
 			"dependsOn": [
 				"[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
