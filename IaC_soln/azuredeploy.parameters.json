@@ -6,7 +6,7 @@
 			"value": "qatodhsub123"
 		},
 		"vmAdminUserName": {
-			"value": "admin"
+			"value": "adminuser"
 		},
 		"vmAdminPassword": {
 			"value": "P@ssw0rd01"
@@ -42,4 +42,4 @@
 			"value": "Standard_B2ms"
 		}
 	}
-}
+} 
