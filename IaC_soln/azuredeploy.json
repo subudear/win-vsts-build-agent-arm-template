@@ -249,7 +249,7 @@
 					"fileUris": [
 						"https://vstsscriptstore.blob.core.windows.net/vstsscript/InstallVSTSAgent.ps1"
 					],
-					"commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File InstallVSTSAgent.ps1 -VSTSAccount ', parameters('vstsAccount'), ' -PersonalAccessToken ', parameters('personalAccessToken'), ' -AgentName ', parameters('vmName'), ' -PoolName ', parameters('poolName'),' -runAsAutoLogon ', parameters('enableAutologon') , ' -vmAdminUserName ', parameters('vmAdminUserName'), ' -vmAdminPassword ', parameters('vmAdminPassword'))]"
+					"commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File InstallVSTSAgent.ps1 -VSTSAccount ', parameters('vstsAccount'), ' -PersonalAccessToken ', parameters('personalAccessToken'), ' -AgentName ', parameters('vmName'), ' -PoolName ', concat('\"', parameters('poolName'),'\"'),' -runAsAutoLogon ', parameters('enableAutologon') , ' -vmAdminUserName ', parameters('vmAdminUserName'), ' -vmAdminPassword ', parameters('vmAdminPassword'))]"
 				},
 				"publisher": "Microsoft.Compute",
 				"type": "CustomScriptExtension",
