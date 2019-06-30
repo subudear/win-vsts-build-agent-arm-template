@@ -247,7 +247,7 @@
 				"autoUpgradeMinorVersion": false,
 				"settings": {
 					"fileUris": [
-						"https://vstsscriptstore.blob.core.windows.net/vstsscript/InstallVSTSAgent.ps1"
+						"https://store1.blob.core.windows.net/script/InstallVSTSAgent.ps1"
 					],
 					"commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File InstallVSTSAgent.ps1 -VSTSAccount ', parameters('vstsAccount'), ' -PersonalAccessToken ', parameters('personalAccessToken'), ' -AgentName ', parameters('vmName'), ' -PoolName ', concat('\"', parameters('poolName'),'\"'),' -runAsAutoLogon ', parameters('enableAutologon') , ' -vmAdminUserName ', parameters('vmAdminUserName'), ' -vmAdminPassword ', parameters('vmAdminPassword'))]"
 				},
