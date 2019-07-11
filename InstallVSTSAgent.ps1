@@ -158,11 +158,14 @@ Write-Verbose "Configuring agent" -Verbose
 Push-Location -Path $agentInstallationPath
 
 if ($runAsAutoLogon -ieq "true") {
-    PrepMachineForAutologon
-
+    #remove the existing agent 
+    .\config.cmd --unattended --url $serverUrl --auth PAT --token $PersonalAccessToken --pool $PoolName --agent $AgentName
+	
+	PrepMachineForAutologon
+    
     # Setup the agent with autologon enabled
-    .\config.cmd --unattended --url $serverUrl --auth PAT --token $PersonalAccessToken --pool $PoolName --agent $AgentName --runAsAutoLogon --overwriteAutoLogon --windowslogonaccount $vmAdminUserName --windowslogonpassword $vmAdminPassword
-}
+    .\config.cmd --unattended --url $serverUrl --auth PAT --token $PersonalAccessToken --pool $PoolName --agent $AgentName --runAsAutoLogon --overwriteAutoLogon --noRestart --windowslogonaccount $vmAdminUserName --windowslogonpassword $vmAdminPassword
+    }
 else{
     # Setup the agent as a service
     .\config.cmd --unattended --url $serverUrl --auth PAT --token $PersonalAccessToken --pool $PoolName --agent $AgentName --runasservice
