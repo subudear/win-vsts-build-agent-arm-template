@@ -184,7 +184,7 @@ Write-Verbose "Exiting InstallVSTSAgent.ps1" -Verbose
 $Path = $env:TEMP; 
 $Installer = "chrome_installer.exe"; 
 Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $Path\$Installer; 
-Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; 
+Start-Process -FilePath $Path\$Installer -Args "/silent /install" ; 
 Remove-Item $Path\$Installer
 #------------------------------------------------------------------------------------------------------------------
 
@@ -197,7 +197,7 @@ $source = "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-U
 $destination = "$Path\firefox.exe";
 Invoke-WebRequest $source -OutFile $destination;
 # Start the installation
-Start-Process -FilePath "$Path\firefox.exe" -ArgumentList "/S" -Verb RunAs -Wait;
+Start-Process -FilePath "$Path\firefox.exe" -ArgumentList "/S" ;
 Remove-Item "$Path\firefox.exe"
 #-------------------------------------------------------------------------------------------
 
